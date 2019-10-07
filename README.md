@@ -26,12 +26,12 @@ Install in order.
 ## Versioning
 
 ## LMASK
-Team members' names
-* **Sarah Nicole** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Luiz Astorga**
-* **Kira **
-* **Aditi**
-* **Muhammad Salman**
+Team member:
+  * **Sarah Nicole** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+  * **Luiz Astorga**
+  * **Kira **
+  * **Aditi**
+  * **Muhammad Salman**
 
 ## Acknowledgments
 Previous EPICS groups that have worked on this project.
