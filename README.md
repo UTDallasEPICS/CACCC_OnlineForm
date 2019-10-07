@@ -29,7 +29,7 @@ Install in order.
 Team member:
   * **Sarah Nicole** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
   * **Luiz Astorga**
-  * **Kira **
+  * **Kira**
   * **Aditi**
   * **Muhammad Salman**
 
