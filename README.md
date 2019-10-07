@@ -27,11 +27,11 @@ Install in order.
 
 ## LMASK
 Team member:
-  * **Sarah Nicole** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-  * **Luiz Astorga**
-  * **Kira**
-  * **Aditi**
-  * **Muhammad Salman**
+  * **Sarah Nicole**    - Project Liason
+  * **Luiz Astorga**    - Project Web Master
+  * **Kira**            - Project Financial Officer
+  * **Aditi**           - Project Manager
+  * **Muhammad Salman** - Project Document Manager
 
 ## Acknowledgments
 Previous EPICS groups that have worked on this project.
