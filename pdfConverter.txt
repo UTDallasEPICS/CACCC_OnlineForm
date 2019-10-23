@@ -5,6 +5,9 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import portrait
 import csv
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer,KeepTogether,tables, PageBreak
+from reportlab.lib.units import inch,cm,mm
+
 
 # PDF document layout
 canvas = canvas.Canvas("H:\College Fourth Year\Development Project\Final Year Project 2018\Forensic Reports\SMS Report.pdf", pagesize=letter)
@@ -29,11 +32,13 @@ canvas.drawString(30,735,'CAC# ')
 canvas.line(65,735,190,735)
 
 # Making FONT size smaller
-canvas.setFont('Helvetica', 11)
+canvas.setFont('Helvetica', 12)
 
 # NOMBRE DE NINO/A: Title
 canvas.drawString(30, 700, "NOMBRE DE NINO/A: ")
 
+#FIELDS FORM CHANGE
+canvas.setFont('Helvetica-Bold', 11)
 # NOMBRE DE NINO/A: Line 2
 canvas.drawString(30, 685, "Primero")
 canvas.line(70, 685, 198, 685)
@@ -67,9 +72,136 @@ canvas.line(70, 640, 200, 640)
 
 canvas.drawString(240, 640, "Celular (        )")
 
-canvas.drawString()
+canvas.drawString(500, 640, "Otro (        )")
+
+#NOMBRE DE NINO/A: Line 6
+canvas.drawString(30, 625, "Fecha de Nacimiento:")
+canvas.drawString(240, 625, "Edad:")
+canvas.drawString(500, 625, "Sexo:")
+
+#NOMBRE DE NINO/A: line 7
+x = 20
+canvas.drawString(30, 610, "Raza: ")
+
+canvas.drawString(50 + x, 610, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+
+
+#NOMBRE DE NINO/A: line 8
+canvas.drawString(30, 595, "Pertenencia Étnica:")
+
+#NOMBRE DE NINO/A: line 9
+canvas.drawString(30, 580, "Inhabilidades:")
+canvas.drawString(500, 580, "Otro :")
+#NOMBRE DE NINO/A: line 10
+canvas.drawString(30, 565, "Por favor indique todas necesidades especiales: ")
+
+
+#INFORMACION DE HERMANO/A HERMANASTRO/A
+canvas.setFont('Helvetica', 12)
+ 
+# Number 1
+# INFORMACION DE HERMANO/A O HERMANSATRO: Title // 535
+canvas.drawString(30, 535, "INFORMACION DE HERMANO/A O HERMANASTRO/A ")
+canvas.setFont('Helvetica-Bold', 11)
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 2
+canvas.drawString(30, 520, "Primero")
+
+ 
+canvas.drawString(200, 520, "Segundo")
+
+ 
+canvas.drawString(400, 520, "Apellido")
+
+ 
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 3
+canvas.drawString(30, 505, "Dirección")
+
+ 
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 4
+canvas.drawString(30, 490, "Ciudad")
+
+ 
+canvas.drawString(200, 490, "Estado")
+
+ 
+canvas.drawString(285, 490, "Código Postal")
+
+ 
+canvas.drawString(480, 490, "Condado")
+
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: Line 5
+canvas.drawString(30, 475, "Teléfono de Casa (        )")
+
+ 
+canvas.drawString(240, 475, "Celular (        )")
+ 
+canvas.drawString(500, 475, "Otro (        )")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: Line 6
+canvas.drawString(30, 460, "Fecha de Nacimiento:")
+canvas.drawString(240, 460, "Edad:")
+canvas.drawString(500, 460, "Sexo:")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 7
+x = 20
+canvas.drawString(30, 445, "Raza: ")
+ 
+canvas.drawString(50 + x, 445, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+ 
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 8
+canvas.drawString(30, 430, "Pertenencia Étnica:")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 9
+canvas.drawString(30, 415, "Inhabilidades:")
+canvas.drawString(500, 415, "Otro :")
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 10
+
+ 
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 8
+canvas.drawString(30, 405, "Pertenencia Étnica:")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 9
+canvas.drawString(30, 390, "Inhabilidades:")
+canvas.drawString(500, 390, "Otro :")
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 10
+#canvas.drawString(30, , "Por favor indique todas necesidades especiales: ")
+Story = [Spacer(2.5,0.75*inch)]
+Story.append(PageBreak())
 
 textObject = canvas.beginText(30, 700)
+
+textObject = canvas.beginText(30, 700)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #for line in lines:
 #    textObject.textLine(line)
