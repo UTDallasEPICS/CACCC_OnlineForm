@@ -156,46 +156,142 @@ canvas.drawString(30, 430, "Pertenencia Étnica:")
 #INFORMACION DE HERMANO/A O HERMANSATRO: line 9
 canvas.drawString(30, 415, "Inhabilidades:")
 canvas.drawString(500, 415, "Otro :")
-#INFORMACION DE HERMANO/A O HERMANSATRO: line 10
 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 10
+canvas.drawString(30, 400, "Por favor indique todas necesidades especiales: ")
+
+###########################################################################################################################
+
+# FONT
+canvas.setFont('Helvetica', 12)
+
+# Number 1
+# INFORMACION DE HERMANO/A O HERMANSATRO: Title // 535
+canvas.drawString(30, 370, "INFORMACION DE HERMANO/A O HERMANASTRO/A ")
+canvas.setFont('Helvetica-Bold', 11)
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 2
+canvas.drawString(30, 355, "Primero")
+
+ 
+canvas.drawString(200, 355, "Segundo")
+
+ 
+canvas.drawString(400, 355, "Apellido")
+
+ 
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 3
+canvas.drawString(30, 340, "Dirección")
+
+ 
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 4
+canvas.drawString(30, 325, "Ciudad")
+
+ 
+canvas.drawString(200, 325, "Estado")
+
+ 
+canvas.drawString(285, 325, "Código Postal")
+
+ 
+canvas.drawString(480, 325, "Condado")
+
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: Line 5
+canvas.drawString(30, 310, "Teléfono de Casa (        )")
+
+ 
+canvas.drawString(240, 310, "Celular (        )")
+ 
+canvas.drawString(500, 310, "Otro (        )")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: Line 6
+canvas.drawString(30, 295, "Fecha de Nacimiento:")
+canvas.drawString(240, 295, "Edad:")
+canvas.drawString(500, 295, "Sexo:")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 7
+x = 20
+canvas.drawString(30, 280, "Raza: ")
+ 
+canvas.drawString(50 + x, 280, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
  
  
 #INFORMACION DE HERMANO/A O HERMANSATRO: line 8
-canvas.drawString(30, 405, "Pertenencia Étnica:")
+canvas.drawString(30, 265, "Pertenencia Étnica:")
  
 #INFORMACION DE HERMANO/A O HERMANSATRO: line 9
-canvas.drawString(30, 390, "Inhabilidades:")
-canvas.drawString(500, 390, "Otro :")
+canvas.drawString(30, 255, "Inhabilidades:")
+canvas.drawString(500, 255, "Otro :")
+
 #INFORMACION DE HERMANO/A O HERMANSATRO: line 10
-#canvas.drawString(30, , "Por favor indique todas necesidades especiales: ")
-Story = [Spacer(2.5,0.75*inch)]
-Story.append(PageBreak())
+canvas.drawString(30, 240, "Por favor indique todas necesidades especiales: ")
 
-textObject = canvas.beginText(30, 700)
-
-textObject = canvas.beginText(30, 700)
+###############################################################################################################################################################
 
 
+# Number 1
+# INFORMACION DE HERMANO/A O HERMANSATRO: Title // 535
+canvas.setFont('Helvetica', 12)
+canvas.drawString(30, 210, "INFORMACION DE HERMANO/A O HERMANASTRO/A ")
+canvas.setFont('Helvetica-Bold', 11)
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 2
+canvas.drawString(30, 195, "Primero")
 
+ 
+canvas.drawString(200, 195, "Segundo")
 
+ 
+canvas.drawString(400, 195, "Apellido")
 
+ 
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 3
+canvas.drawString(30, 180, "Dirección")
 
+ 
+# INFORMACION DE HERMANO/A O HERMANSATRO: Line 4
+canvas.drawString(30, 165, "Ciudad")
 
+ 
+canvas.drawString(200, 165, "Estado")
 
+ 
+canvas.drawString(285, 165, "Código Postal")
 
+ 
+canvas.drawString(480, 165, "Condado")
 
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: Line 5
+canvas.drawString(30, 150, "Teléfono de Casa (        )")
 
+ 
+canvas.drawString(240, 150, "Celular (        )")
+ 
+canvas.drawString(500, 150, "Otro (        )")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: Line 6
+canvas.drawString(30, 135, "Fecha de Nacimiento:")
+canvas.drawString(240, 135, "Edad:")
+canvas.drawString(500, 135, "Sexo:")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 7
+x = 20
+canvas.drawString(30, 120, "Raza: ")
+ 
+canvas.drawString(50 + x, 120, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+ 
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 8
+canvas.drawString(30, 105, "Pertenencia Étnica:")
+ 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 9
+canvas.drawString(30, 90, "Inhabilidades:")
+canvas.drawString(500, 90, "Otro :")
 
+#INFORMACION DE HERMANO/A O HERMANSATRO: line 10
+canvas.drawString(30, 75, "Por favor indique todas necesidades especiales: ")
 
-
-
-
-
-
-
-
-
-
+canvas.drawString(30, -50, "This is going to be a negative number")
 
 
 
