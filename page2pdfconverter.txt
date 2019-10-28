@@ -1,0 +1,315 @@
+# Script to generate a PDF report after data has been parsed into .csv file
+
+# import statements
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import portrait
+import csv
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer,KeepTogether,tables, PageBreak
+from reportlab.lib.units import inch,cm,mm
+from reportlab.platypus import PageBreak
+
+# PDF document layout
+canvas = canvas.Canvas("H:\College Fourth Year\Development Project\Final Year Project 2018\Forensic Reports\SMS Report.pdf", pagesize=letter)
+
+# set the line width
+canvas.setLineWidth(.3)
+
+# FONT
+canvas.setFont('Helvetica', 12)
+
+canvas.drawString(30, 750, "INFORMACION DE PADRE/MADRE Y PADRASTRO/MADRASTRO")
+
+canvas.drawString(30, 735, "MADRE BIOLOGICA")
+
+# FONT 
+canvas.setFont('Helvetica-Bold', 11)
+
+# NOMBRE DE NINO/A: Line 2
+canvas.drawString(30, 720, "Primero Nombre")
+
+canvas.drawString(200, 720, "Segundo")
+
+canvas.drawString(400, 720, "Apellido")
+
+# Line 2.5
+canvas.drawString(30, 705, "Fecha de Nacimiento:        /      /       ")
+
+canvas.drawString(220, 705, "Edad: ")
+
+canvas.drawString(320, 705, "Correo Electrónico:")
+
+# NOMBRE DE NINO/A: Line 3
+canvas.drawString(30, 690, "Dirección")
+
+# NOMBRE DE NINO/A: Line 4
+canvas.drawString(30, 675, "Ciudad")
+
+canvas.drawString(200, 675, "Estado")
+
+canvas.drawString(285, 675, "Código Postal")
+
+canvas.drawString(450, 675, "Condado")
+
+#NOMBRE DE NINO/A: Line 5
+canvas.drawString(30, 660, "Teléfono de Casa (        )")
+
+canvas.drawString(240, 660, "Celular (        )")
+
+canvas.drawString(450, 660, "Trabajo (        )")
+
+#NOMBRE DE NINO/A: line 7
+x = 20
+canvas.drawString(30, 645, "Raza: ")
+
+canvas.drawString(50 + x, 645, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+
+
+#NOMBRE DE NINO/A: line 8
+canvas.drawString(30, 630, "Pertenencia Étnica:")
+
+#NOMBRE DE NINO/A: line 9
+canvas.drawString(30, 615, "Inhabilidades:")
+
+canvas.drawString(500, 615, "Otro :")
+
+#NOMBRE DE NINO/A: line 10
+canvas.drawString(30, 600, "Por favor indique todas necesidades especiales: ")
+
+#
+canvas.drawString(30, 585, "Empleador")
+
+canvas.drawString(30, 570, "Dirección de Empleador")
+
+################################################################################################################################################################################################
+# FONT
+canvas.setFont('Helvetica', 12)
+
+canvas.drawString(30, 540, "PADRE BIOLOGICO")
+
+# FONT 
+canvas.setFont('Helvetica-Bold', 11)
+
+# NOMBRE DE NINO/A: Line 2
+canvas.drawString(30, 525, "Primero Nombre")
+
+canvas.drawString(200, 525, "Segundo")
+
+canvas.drawString(400, 525, "Apellido")
+
+# Line 2.5
+canvas.drawString(30, 510, "Fecha de Nacimiento:        /      /       ")
+
+canvas.drawString(220, 510, "Edad: ")
+
+canvas.drawString(320, 510, "Correo Electrónico:")
+
+# NOMBRE DE NINO/A: Line 3
+canvas.drawString(30, 495, "Dirección")
+
+# NOMBRE DE NINO/A: Line 4
+canvas.drawString(30, 480, "Ciudad")
+
+canvas.drawString(200, 480, "Estado")
+
+canvas.drawString(285, 480, "Código Postal")
+
+canvas.drawString(450, 480, "Condado")
+
+#NOMBRE DE NINO/A: Line 5
+canvas.drawString(30, 465, "Teléfono de Casa (        )")
+
+canvas.drawString(240, 465, "Celular (        )")
+
+canvas.drawString(450, 465, "Trabajo (        )")
+
+#NOMBRE DE NINO/A: line 7
+x = 20
+canvas.drawString(30, 450, "Raza: ")
+
+canvas.drawString(50 + x, 450, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+
+
+#NOMBRE DE NINO/A: line 8
+canvas.drawString(30, 435, "Pertenencia Étnica:")
+
+#NOMBRE DE NINO/A: line 9
+canvas.drawString(30, 420, "Inhabilidades:")
+
+canvas.drawString(500, 420, "Otro :")
+
+#NOMBRE DE NINO/A: line 10
+canvas.drawString(30, 405, "Por favor indique todas necesidades especiales: ")
+
+#
+canvas.drawString(30, 390, "Empleador")
+
+#
+canvas.drawString(30, 375, "Dirección de Empleador")
+
+################################################################################################################################################################################################
+# FONT
+canvas.setFont('Helvetica', 12)
+
+canvas.drawString(30, 345, "PADRASTRO/MADRASTRA")
+
+# FONT 
+canvas.setFont('Helvetica-Bold', 11)
+
+# NOMBRE DE NINO/A: Line 2
+canvas.drawString(30, 330, "Primero Nombre")
+
+canvas.drawString(200, 330, "Segundo")
+
+canvas.drawString(400, 330, "Apellido")
+
+# Line 2.5
+canvas.drawString(30, 315, "Fecha de Nacimiento:        /      /       ")
+
+canvas.drawString(220, 315, "Edad: ")
+
+canvas.drawString(320, 315, "Correo Electrónico:")
+
+# NOMBRE DE NINO/A: Line 3
+canvas.drawString(30, 300, "Dirección")
+
+# NOMBRE DE NINO/A: Line 4
+canvas.drawString(30, 285, "Ciudad")
+
+canvas.drawString(200, 285, "Estado")
+
+canvas.drawString(285, 285, "Código Postal")
+
+canvas.drawString(450, 285, "Condado")
+
+#NOMBRE DE NINO/A: Line 5
+canvas.drawString(30, 270, "Teléfono de Casa (        )")
+
+canvas.drawString(240, 270, "Celular (        )")
+
+canvas.drawString(450, 270, "Trabajo (        )")
+
+#NOMBRE DE NINO/A: line 7
+x = 20
+canvas.drawString(30, 255, "Raza: ")
+
+canvas.drawString(50 + x, 255, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+
+
+#NOMBRE DE NINO/A: line 8
+canvas.drawString(30, 240, "Pertenencia Étnica:")
+
+#NOMBRE DE NINO/A: line 9
+canvas.drawString(30, 225, "Inhabilidades:")
+
+canvas.drawString(500, 225, "Otro :")
+
+#NOMBRE DE NINO/A: line 10
+canvas.drawString(30, 210, "Por favor indique todas necesidades especiales: ")
+
+#
+canvas.drawString(30, 195, "Empleador")
+
+#
+canvas.drawString(30, 180, "Dirección de Empleador")
+
+################################################################################################################################################################################################
+# FONT
+canvas.setFont('Helvetica', 12)
+
+canvas.drawString(30, 150, "PADRASTRO/MADRASTRA")
+
+# FONT 
+canvas.setFont('Helvetica-Bold', 11)
+
+# NOMBRE DE NINO/A: Line 2
+canvas.drawString(30, 135, "Primero Nombre")
+
+canvas.drawString(200, 135, "Segundo")
+
+canvas.drawString(400, 135, "Apellido")
+
+# Line 2.5
+canvas.drawString(30, 120, "Fecha de Nacimiento:        /      /       ")
+
+canvas.drawString(220, 120, "Edad: ")
+
+canvas.drawString(320, 120, "Correo Electrónico:")
+
+# NOMBRE DE NINO/A: Line 3
+canvas.drawString(30, 105, "Dirección")
+
+# NOMBRE DE NINO/A: Line 4
+canvas.drawString(30, 95, "Ciudad")
+
+canvas.drawString(200, 95, "Estado")
+
+canvas.drawString(285, 95, "Código Postal")
+
+canvas.drawString(450, 95, "Condado")
+
+#NOMBRE DE NINO/A: Line 5
+canvas.drawString(30, 80, "Teléfono de Casa (        )")
+
+canvas.drawString(240, 80, "Celular (        )")
+
+canvas.drawString(450, 80, "Trabajo (        )")
+
+#NOMBRE DE NINO/A: line 7
+x = 20
+canvas.drawString(30, 65, "Raza: ")
+
+canvas.drawString(50 + x, 65, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+
+
+#NOMBRE DE NINO/A: line 8
+canvas.drawString(30, 50, "Pertenencia Étnica:")
+
+#NOMBRE DE NINO/A: line 9
+canvas.drawString(30, 35, "Inhabilidades:")
+
+#canvas.drawString(500, 225, "Otro :")
+
+#NOMBRE DE NINO/A: line 10
+#canvas.drawString(30, 210, "Por favor indique todas necesidades especiales: ")
+
+#
+#canvas.drawString(30, 195, "Empleador")
+
+#
+#canvas.drawString(30, 180, "Dirección de Empleador")
+
+
+
+#for line in lines:
+#    textObject.textLine(line)
+#canvas.drawText(textObject)
+
+# File that must be written to report
+data_file = 'H:\College Fourth Year\Development Project\Final Year Project 2018\ExtractedEvidence\smsInfo.csv'
+c = canvas
+
+# Function for importing data
+def import_Data(data_file):
+    smsInfo = csv.reader(open(data_file, "r"))
+    for row in smsInfo:
+        ID = row[0]
+        Incoming_Number = row[1]
+        Date_And_Time = row[2]
+        Read = row[3]
+        Sent_Replied = row[4]
+        Body = row[5]
+        Seen = [6]
+        pdf_filename = 'SMS Data Report.pdf'
+    generate_report(ID, Incoming_Number, Date_And_Time, Read, Sent_Replied, Body, Seen)
+
+def generate_report(ID, Date_And_Time, Read, Sent_Replied, Body, Seen, pdf_filename):
+    #c = canvas.Canvas(pdf_filename, pagesize=portrait(letter))
+
+
+
+    import_Data(data_file)
+canvas.save()
+
+
+print("Forensic Report Generated!")
