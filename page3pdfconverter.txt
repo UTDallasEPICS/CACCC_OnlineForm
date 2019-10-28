@@ -1,0 +1,187 @@
+# Script to generate a PDF report after data has been parsed into .csv file
+
+# import statements
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import portrait
+import csv
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer,KeepTogether,tables, PageBreak
+from reportlab.lib.units import inch,cm,mm
+from reportlab.platypus import pagebreake
+
+# PDF document layout
+canvas = canvas.Canvas("H:\College Fourth Year\Development Project\Final Year Project 2018\Forensic Reports\SMS Report.pdf", pagesize=letter)
+
+# set the line width
+canvas.setLineWidth(.3)
+
+# FONT
+canvas.setFont('Helvetica-Bold', 11)
+
+#
+canvas.drawString(30, 750, "Por favor indique todas necesidades especiales: ")
+
+#
+canvas.drawString(30, 735, "Empleador")
+
+#
+canvas.drawString(30, 720, "Dirección de Empleador")
+
+# INFORMACION DE GUARDIAN (Relación al niño/a
+canvas.setFont('Helvetica', 12)
+canvas.drawString(30, 690, "INFORMACION DE GUARDIAN (Relación al niño/a")
+canvas.drawString(650, 690, ")")
+
+# FONT
+canvas.setFont('Helvetica-Bold', 11)
+
+# Line 2
+canvas.drawString(30, 675, "Primero Nombre")
+
+canvas.drawString(200, 675, "Segundo")
+
+canvas.drawString(400, 675, "Apellido")
+
+# Line 2.5
+canvas.drawString(30, 660, "Fecha de Nacimiento:        /      /       ")
+
+canvas.drawString(220, 660, "Edad: ")
+
+canvas.drawString(320, 660, "Correo Electrónico:")
+
+# NOMBRE DE NINO/A: Line 3
+canvas.drawString(30, 645, "Dirección")
+
+# NOMBRE DE NINO/A: Line 4
+canvas.drawString(30, 630, "Ciudad")
+
+canvas.drawString(200, 630, "Estado")
+
+canvas.drawString(285, 630, "Código Postal")
+
+canvas.drawString(450, 630, "Condado")
+
+#NOMBRE DE NINO/A: Line 5
+canvas.drawString(30, 615, "Teléfono de Casa (        )")
+
+canvas.drawString(240, 615, "Celular (        )")
+
+canvas.drawString(450, 615, "Trabajo (        )")
+
+#NOMBRE DE NINO/A: line 7
+x = 20
+canvas.drawString(30, 600, "Raza: ")
+
+canvas.drawString(50 + x, 600, " Africano-Americano   Isleño Pacifico   Indio Americano   Asiático   Blanco   Otro")
+
+
+#NOMBRE DE NINO/A: line 8
+canvas.drawString(30, 585, "Pertenencia Étnica:")
+
+#NOMBRE DE NINO/A: line 9
+canvas.drawString(30, 570, "Inhabilidades:")
+
+#
+canvas.drawString(30, 555, "Por favor indique todas necesidades especiales: ")
+
+#
+canvas.drawString(30, 540, "Empleador")
+
+#
+canvas.drawString(30, 525, "Dirección de Empleador")
+
+################################################################################################################################################################################################
+
+# FONT
+canvas.setFont('Helvetica', 12)
+
+#
+canvas.drawString(180, 490, "RECONOCIMIENTO DE ENTREVISTA GRABADA")
+canvas.line(30, 475, 570, 475)
+
+# FONT
+canvas.setFont('Helvetica-Bold', 11)
+
+#
+canvas.drawString(30, 460, "Por favor poner iniciales: ")
+
+#
+canvas.line(30, 430, 60, 430)
+canvas.drawString(75, 430, "Yo me doy por enterar que a mi hijo/a se le hará una entrevista grabada para la investigación. La")
+
+#
+canvas.drawString(75, 415, "grabación permanecerá en las oficinas del Collin County Childrens Advocacy Center y las agencias")
+
+#
+canvas.drawString(75, 400, "investigadoras.")
+
+#
+canvas.line(30, 370, 60, 370)
+canvas.drawString(75, 370, "Yo entiendo que partes de la grabación pueden ser utilizadas por entrevistadores e investigadores que")
+
+#
+canvas.drawString(75, 355, "están entrenando, en dado caso que se haga uso de el video de su hijo/a, se mostraran porciones que no")
+
+#
+canvas.drawString(75, 340, "incluyan el nombre de su hijo/a")
+
+#
+canvas.line(30, 300, 550, 300)
+
+#
+canvas.drawString(30, 285, "Firma de Padre/Guardián                                                               Fecha")
+
+# FONT 
+canvas.setFont('Helvetica', 12)
+canvas.line(30, 140, 570, 140)
+
+#
+canvas.drawString(30, 125, "PARA USO OFICIAL SOLAMENTE (no escribe debajo de esta linea)")
+
+#
+canvas.line(30, 95, 40, 95)
+canvas.drawString(45, 95, "Provided CVC Info")
+
+canvas.line(160, 95, 170, 95)
+canvas.drawString(175, 95, "Provided V.I.N.E Info")
+
+canvas.drawString(320, 95, "By: ")
+
+
+
+
+
+
+
+
+
+
+
+# File that must be written to report
+data_file = 'H:\College Fourth Year\Development Project\Final Year Project 2018\ExtractedEvidence\smsInfo.csv'
+c = canvas
+
+# Function for importing data
+def import_Data(data_file):
+    smsInfo = csv.reader(open(data_file, "r"))
+    for row in smsInfo:
+        ID = row[0]
+        Incoming_Number = row[1]
+        Date_And_Time = row[2]
+        Read = row[3]
+        Sent_Replied = row[4]
+        Body = row[5]
+        Seen = [6]
+        pdf_filename = 'SMS Data Report.pdf'
+    generate_report(ID, Incoming_Number, Date_And_Time, Read, Sent_Replied, Body, Seen)
+
+def generate_report(ID, Date_And_Time, Read, Sent_Replied, Body, Seen, pdf_filename):
+    #c = canvas.Canvas(pdf_filename, pagesize=portrait(letter))
+
+
+
+    import_Data(data_file)
+canvas.save()
+
+
+print("Forensic Report Generated!")
