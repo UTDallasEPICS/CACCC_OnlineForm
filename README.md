@@ -9,7 +9,7 @@ Mr.Tom.\
 If on github then find the files by searching.
 
 First off use the bitnami wordpress file to install bitnami.\
-    Click next till create admin account page.\
+	Click next till create admin account page.\
         remember login and password as it will be needed later.\
         one time thing.\
     Click next till Deploy wordpress to the cloud page\
