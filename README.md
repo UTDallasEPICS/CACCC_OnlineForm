@@ -2,14 +2,14 @@
 UTD EPICS Children's Advocacy Center Online From Project
 
 ## Getting Started
-Also remember to switch apache server to port 81 in bitnami windows manager.
 
 There are 4 files in this folder.
+If on github then find the files by searching.
 
 First off use the bitnami wordpress file to install bitnami. 
 	Click next till create admin account page.
 		remember login and password as it will be needed later.
-			one time thing.
+		one time thing.
 	Click next till Deploy wordpress to the cloud page 
 		Deselect the checkbox.
 	Finish the installation.
@@ -19,14 +19,17 @@ A website should open up in your browser on the localhost.
 		Make a shortcut to manager-windows.exe
 		This file is where you installed bitnami under
 		the wordpress5.3.2 folder.
-
+	IMPORTANT
+	* Also after opening manager-windows.exe go to manage server
+	  and change the port of myApacheServer to 81. and open website
+	  from welcome tab and select Go to Application button.
+	  
 The opened website should have Access WordPress written there.
 	Click those words.
 	New page should have Meta section with Log in button
 	Click Log in under Meta.
 
 Login in using the user and password you set during installation.
-
 
 Click the plugins section in the browser tab 
 
@@ -37,8 +40,7 @@ Click Upload Plugin button.
 
 Then check the boxes for that plugin in the list of plugins shown.
 	Both the All-in-One WP Migration and 
-		 All-in-One WP Migration File Extension ones.
-
+        All-in-One WP Migration File Extension ones.
 	and activate both if any of them are deactivated.
 
 Then under plugin section you'll see new section called All-in-One WP Migration
@@ -53,9 +55,7 @@ This will lof you out and make you sign in with new credentials:
 
 This will conclude setup for the site.
 
-
 -----------------------------------------------------------------------------------------
-
 
 For working on the pdf converter.
 
@@ -65,10 +65,7 @@ go to repl.it and make a new python Repl.
 Copy files from the file to the new repl. 
 	* Just drag all those files into the repl.
 
-
 -----------------------------------------------------------------------------------------
-
-
 
 Things to do website:
 	1. Final checks.
@@ -96,10 +93,10 @@ Things to do for converter:
 			*just search reportlab pdf and search for flowables in that doc.
 		* these are two ways to solve the problem of string that are too long and 
 		  overlap with the other text in the pdf.
-	
+		  
 	3. Make sure files are saved as 'lastname-firstname-date_submitted'
-
-	4. make better comments and make a document for client to use.
+	
+        4. make better comments and make a document for client to use.
 		We want this part to be automatic.
 	
 
