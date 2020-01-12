@@ -4,6 +4,8 @@ UTD EPICS Children's Advocacy Center Online From Project
 ## Getting Started
 
 There are 4 files in this folder.
+Some files are too big to fit in Github so get them from Box or from flashdrive from 
+Mr.Tom.
 If on github then find the files by searching.
 
 First off use the bitnami wordpress file to install bitnami. 
@@ -70,15 +72,15 @@ Copy files from the file to the new repl.
 Things to do website:
 	1. Final checks.
 	2. Make the website work at CACCC. Start doing this right after setup.
-		*Should be able to access website from tablet at site. 
-		*Idea is to use 'computer ip':81/wordpress. Is how to get to the website 
+		1.Should be able to access website from tablet at site. 
+		2.Idea is to use 'computer ip':81/wordpress. Is how to get to the website 
 		from the same network. It should work if:
 			1. Both tablet and computer/server is on same (wifi)network.
 			2. from tablet url type 'computer ip':81 and it should take you to
 			website.
 	3. .bat file to restart server if power goes down.
-		*Ask Advisor for 2 and 3.
-		*Get Started soon after setting up.
+		1. Ask Advisor for 2 and 3.
+		2. Get Started soon after setting up.
 	4. Need to write some php code to make submit button send form csv directly to 
 	python converter and making that automatic.
 
@@ -90,8 +92,8 @@ Things to do for converter:
 		   write half string half abouve line and half below line to get more space 
 		   for string.
 		2. You can look into using flowables from reportlab flowables.
-			*just search reportlab pdf and search for flowables in that doc.
-		* these are two ways to solve the problem of string that are too long and 
+			1. just search reportlab pdf and search for flowables in that doc.
+		*these are two ways to solve the problem of string that are too long and 
 		  overlap with the other text in the pdf.
 		  
 	3. Make sure files are saved as 'lastname-firstname-date_submitted'
