@@ -5,7 +5,9 @@ UTD EPICS Children's Advocacy Center Online From Project
 
 There are 4 files in this folder.
 If on github then find the files by searching.
-Some files are too big to fit in Github so get them from Box or from flashdrive from Mr.Tom.
+Some files are too big to fit in Github so get them from this link
+https://cometmail-my.sharepoint.com/:f:/r/personal/mhs170002_utdallas_edu/Documents/EPICS%20folder?csf=1&e=w522Tp
+or from flashdrive from Mr.Tom.
 
 First off use the bitnami wordpress file to install bitnami.
 - Click next till create admin account page.
